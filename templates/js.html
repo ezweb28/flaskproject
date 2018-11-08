@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning JavaScript</title>
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="header">
+    <h1 id="heading">Learning JavaScript</h1>
+    <p>With Brad Traversy</p>
+</div>
+
+<div class="container">
+    <!--<button onclick="doClick()">Click Me</button>-->
+    <!--<button onclick="this.innerHTML = 'You Clicked!'">-->
+        <!--Click Me-->
+    <!--</button>-->
+
+    <button onclick="showDate()">Click Me</button>
+    <button onmouseout="clearDate()" onmouseover="showDate()">Click Me</button>
+    <h1 id="time"></h1>
+</div>
+
+<script>
+    function clearDate() {
+        var time = document.getElementById('time');
+        time.innerHTML = '';
+    }
+    function showDate() {
+        var time = document.getElementById('time');
+        time.innerHTML = Date();
+    }
+    function changeText() {
+        var heading = document.getElementById('heading');
+        heading.innerHTML = 'You Clicked!';
+    }
+    // function changeText(id) {
+    //     id.innerHTML = 'You Clicked!';
+    // }
+    function doClick() {
+        alert('You Clicked!!');
+    }
+    // for loop
+    // for(var i = 0; i <= 20; i++){
+    //     console.log('I love the number ' + i)
+    // }
+
+    // while loop
+    // var i = 0;
+    // while(i < 10) {
+    //     console.log(i);
+    //     i++;
+    // }
+
+    // for each
+    // var numbers = [33, 54, 76, 34, 2, 6];
+    // numbers.forEach(function(number) {
+    //     console.log(number);
+    // });
+
+    // var numbers = [33, 54, 76, 34, 2, 6];
+    // for (var i = 0;i < numbers.length;i++) {
+    //     console.log(numbers[i]);
+    // }
+
+    // if statement
+    // if (1 === '1') {    // type has to be the same
+    //     console.log('match');
+    // }
+
+    // var var1 = 3;
+    // var var2 = 4;
+    // if (var1 == var2) {
+    //     console.log('This is true');
+    // } else {
+    //     console.log('This is false');
+    // }
+
+    // switch statement
+    // var fruit = 'banana';
+    //
+    // switch(fruit) {
+    //     case "banana":
+    //         alert("I hate bananas");
+    //         break;
+    //     case "apple":
+    //         alert("I love apples");
+    //         break;
+    //     default:
+    //         alert("I love all other fruits");
+    //         break;
+    // }
+
+    // Object literal
+    // var person = {
+    //     firstName: 'Brad',
+    //     lastName: 'Traversy',
+    //     age: 34,
+    //     children: ['Brianna', 'Nicholas'],
+    //     address: {
+    //         street:'555 something st',
+    //         city: 'Boston',
+    //         state: 'MA'
+    //     },
+    //     fullName: function() {
+    //         return this.firstName + " " + this.lastName;
+    //     }
+    // }
+    // console.log(person.children[0]);
+    // console.log(person.address.state);
+    // console.log(person.fullName());
+
+    // Object Constructor
+    // var apple = new Object();
+    // apple.color = 'red';
+    // apple.shape = 'round';
+    //
+    // apple.describe = function() {
+    //     return 'An apple is the color ' + this.color + ' and is the shape ' +
+    //             this.shape;
+    // }
+    //
+    // console.log(apple.describe());
+
+    // Constructor Pattern
+    // function Fruit(name, color, shape) {
+    //     this.name = name;
+    //     this.color = color;
+    //     this.shape = shape;
+    //
+    //     this.describe = function() {
+    //         return 'A ' + this.name + ' is the color ' +
+    //                 this.color + ' and is the shape ' +
+    //                 this.shape;
+    //     }
+    // }
+    //
+    // var apple = new Fruit('apple', 'red', 'round');
+    //
+    // var melon = new Fruit('melon', 'green', 'round');
+    //
+    // console.log(melon.describe());
+
+    // var users = [
+    //     {
+    //         name: 'John Doe',
+    //         age: 30
+    //     },
+    //     {
+    //         name: 'Mark Smith',
+    //         age: 44
+    //     },
+    //     {
+    //         name: 'Shelly Williams',
+    //         age: 20
+    //     }
+    // ];
+    // console.log(users[0].name);
+
+
+
+
+</script>
+
+</body>
+</html>
